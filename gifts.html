@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Little Gifts For You 💜</title>
+
+    <!-- Stylish Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Pacifico&display=swap"
+        rel="stylesheet">
+
+    <style>
+
+        /* =========================
+           BASIC RESET
+        ========================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+
+        /* =========================
+           BODY / BACKGROUND
+        ========================= */
+
+        body {
+            font-family: "Caveat", cursive;
+
+            background:
+                radial-gradient(
+                    circle at top,
+                    #a86bd1 0%,
+                    #71399a 45%,
+                    #35144d 100%
+                );
+
+            color: white;
+            position: relative;
+        }
+
+
+        /* =========================
+           FLOATING LOVE EMOJIS
+        ========================= */
+
+        .emoji-background {
+            position: fixed;
+            inset: 0;
+
+            overflow: hidden;
+            pointer-events: none;
+
+            z-index: 0;
+        }
+
+        .emoji {
+            position: absolute;
+
+            bottom: -60px;
+
+            font-size: 25px;
+
+            opacity: 0.85;
+
+            animation: floatUp linear infinite;
+
+            filter:
+                drop-shadow(
+                    0 0 8px rgba(255,255,255,0.35)
+                );
+        }
+
+        .emoji:nth-child(1) {
+            left: 3%;
+            animation-duration: 8s;
+            animation-delay: 0s;
+        }
+
+        .emoji:nth-child(2) {
+            left: 10%;
+            animation-duration: 11s;
+            animation-delay: 2s;
+        }
+
+        .emoji:nth-child(3) {
+            left: 17%;
+            animation-duration: 9s;
+            animation-delay: 4s;
+        }
+
+        .emoji:nth-child(4) {
+            left: 24%;
+            animation-duration: 12s;
+            animation-delay: 1s;
+        }
+
+        .emoji:nth-child(5) {
+            left: 31%;
+            animation-duration: 9s;
+            animation-delay: 3s;
+        }
+
+        .emoji:nth-child(6) {
+            left: 38%;
+            animation-duration: 13s;
+            animation-delay: 0s;
+        }
+
+        .emoji:nth-child(7) {
+            left: 45%;
+            animation-duration: 10s;
+            animation-delay: 5s;
+        }
+
+        .emoji:nth-child(8) {
+            left: 52%;
+            animation-duration: 8s;
+            animation-delay: 2s;
+        }
+
+        .emoji:nth-child(9) {
+            left: 59%;
+            animation-duration: 12s;
+            animation-delay: 4s;
+        }
+
+        .emoji:nth-child(10) {
+            left: 66%;
+            animation-duration: 9s;
+            animation-delay: 1s;
+        }
+
+        .emoji:nth-child(11) {
+            left: 73%;
+            animation-duration: 11s;
+            animation-delay: 3s;
+        }
+
+        .emoji:nth-child(12) {
+            left: 80%;
+            animation-duration: 8s;
+            animation-delay: 0s;
+        }
+
+        .emoji:nth-child(13) {
+            left: 87%;
+            animation-duration: 13s;
+            animation-delay: 5s;
+        }
+
+        .emoji:nth-child(14) {
+            left: 94%;
+            animation-duration: 10s;
+            animation-delay: 2s;
+        }
+
+
+        @keyframes floatUp {
+
+            0% {
+                transform:
+                    translateY(0)
+                    rotate(0deg);
+
+                opacity: 0;
+            }
+
+            10% {
+                opacity: 0.85;
+            }
+
+            50% {
+                transform:
+                    translateY(-55vh)
+                    rotate(15deg);
+            }
+
+            100% {
+                transform:
+                    translateY(-115vh)
+                    rotate(-15deg);
+
+                opacity: 0;
+            }
+        }
+
+
+        /* =========================
+           MAIN PAGE
+        ========================= */
+
+        .gift-page {
+            position: relative;
+
+            z-index: 2;
+
+            width: 100%;
+            height: 100vh;
+
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: center;
+
+            align-items: center;
+
+            padding: 12px;
+        }
+
+
+        /* =========================
+           TOP TEXT
+        ========================= */
+
+        .top-text {
+            font-size: clamp(17px, 2.5vw, 23px);
+
+            letter-spacing: 2px;
+
+            margin-bottom: 3px;
+
+            text-align: center;
+
+            opacity: 0.95;
+        }
+
+
+        /* =========================
+           MAIN HEADING
+        ========================= */
+
+        h1 {
+            font-family: "Pacifico", cursive;
+
+            font-size: clamp(27px, 5vw, 45px);
+
+            text-align: center;
+
+            text-shadow:
+                0 4px 15px rgba(0,0,0,0.35);
+
+            line-height: 1.2;
+        }
+
+
+        /* =========================
+           SUBTITLE
+        ========================= */
+
+        .subtitle {
+            font-size: clamp(17px, 3vw, 24px);
+
+            margin-top: 4px;
+
+            margin-bottom: 15px;
+
+            text-align: center;
+        }
+
+
+        /* =========================
+           GIFT GRID
+           2 TOP + 2 BOTTOM
+        ========================= */
+
+        .gift-grid {
+            width: min(88vw, 570px);
+
+            display: grid;
+
+            grid-template-columns: repeat(2, 1fr);
+
+            gap: 15px;
+        }
+
+
+        /* =========================
+           GIFT BOX
+        ========================= */
+
+        .gift {
+            height: 135px;
+
+            border-radius: 22px;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    #c078e6,
+                    #8b3bb5,
+                    #68248d
+                );
+
+            border:
+                2px solid rgba(255,255,255,0.45);
+
+            box-shadow:
+                0 12px 30px rgba(20,0,35,0.38),
+                inset 0 1px 10px rgba(255,255,255,0.18);
+
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: center;
+
+            align-items: center;
+
+            cursor: pointer;
+
+            transition:
+                transform 0.3s ease,
+                box-shadow 0.3s ease;
+
+            position: relative;
+
+            overflow: hidden;
+        }
+
+
+        .gift::before {
+            content: "";
+
+            position: absolute;
+
+            width: 100%;
+            height: 17px;
+
+            background:
+                rgba(255,255,255,0.18);
+
+            top: 48%;
+            left: 0;
+        }
+
+
+        .gift::after {
+            content: "";
+
+            position: absolute;
+
+            width: 17px;
+            height: 100%;
+
+            background:
+                rgba(255,255,255,0.18);
+
+            left: 50%;
+
+            transform:
+                translateX(-50%);
+        }
+
+
+        .gift:hover {
+            transform:
+                translateY(-7px)
+                scale(1.03);
+
+            box-shadow:
+                0 18px 40px rgba(20,0,35,0.5),
+                0 0 25px rgba(230,180,255,0.45);
+        }
+
+
+        /* =========================
+           GIFT RIBBON
+        ========================= */
+
+        .gift-ribbon {
+            position: absolute;
+
+            top: 9px;
+
+            font-size: 25px;
+
+            z-index: 2;
+        }
+
+
+        /* =========================
+           GIFT ICON
+        ========================= */
+
+        .gift-icon {
+            font-size: 43px;
+
+            z-index: 2;
+
+            margin-bottom: 3px;
+
+            animation:
+                giftBounce 2s ease-in-out infinite;
+        }
+
+
+        @keyframes giftBounce {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-5px);
+            }
+        }
+
+
+        /* =========================
+           GIFT TITLE
+        ========================= */
+
+        .gift-title {
+            font-family: "Pacifico", cursive;
+
+            font-size: 17px;
+
+            z-index: 2;
+        }
+
+
+        /* =========================
+           BOTTOM TEXT
+        ========================= */
+
+        .bottom-text {
+            margin-top: 14px;
+
+            font-size: clamp(18px, 3vw, 22px);
+
+            text-align: center;
+
+            animation:
+                softGlow 2s ease-in-out infinite alternate;
+        }
+
+
+        @keyframes softGlow {
+
+            from {
+                text-shadow:
+                    0 0 5px rgba(255,255,255,0.3);
+            }
+
+            to {
+                text-shadow:
+                    0 0 18px rgba(255,190,255,0.8);
+            }
+        }
+
+
+        /* ==================================================
+           POPUP OVERLAY
+        ================================================== */
+
+        .popup-overlay {
+            position: fixed;
+
+            inset: 0;
+
+            background:
+                rgba(25, 5, 40, 0.55);
+
+            backdrop-filter: blur(7px);
+
+            display: none;
+
+            justify-content: center;
+
+            align-items: center;
+
+            padding: 20px;
+
+            z-index: 100;
+        }
+
+
+        .popup-overlay.show {
+            display: flex;
+        }
+
+
+        /* =========================
+           POPUP BOX
+        ========================= */
+
+        .popup {
+            width: min(90vw, 430px);
+
+            background:
+                linear-gradient(
+                    145deg,
+                    #ffffff,
+                    #f9eaff
+                );
+
+            color: #54206f;
+
+            border-radius: 25px;
+
+            padding: 30px 25px;
+
+            text-align: center;
+
+            box-shadow:
+                0 20px 60px rgba(0,0,0,0.45),
+                0 0 35px rgba(220,150,255,0.45);
+
+            border:
+                2px solid rgba(255,255,255,0.8);
+
+            animation:
+                popupIn 0.35s ease;
+        }
+
+
+        @keyframes popupIn {
+
+            from {
+                opacity: 0;
+
+                transform:
+                    scale(0.75)
+                    translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+
+                transform:
+                    scale(1)
+                    translateY(0);
+            }
+        }
+
+
+        /* =========================
+           POPUP EMOJI
+        ========================= */
+
+        .popup-icon {
+            font-size: 48px;
+
+            margin-bottom: 8px;
+        }
+
+
+        /* =========================
+           POPUP TITLE
+        ========================= */
+
+        .popup h2 {
+            font-family: "Pacifico", cursive;
+
+            font-size: 26px;
+
+            margin-bottom: 12px;
+
+            color: #752c99;
+        }
+
+
+        /* =========================
+           POPUP MESSAGE
+        ========================= */
+
+        .popup p {
+            font-size: 22px;
+
+            line-height: 1.35;
+
+            margin-bottom: 18px;
+        }
+
+
+        /* =========================
+           CLOSE TEXT
+        ========================= */
+
+        .close-hint {
+            font-family: "Caveat", cursive;
+
+            font-size: 17px;
+
+            opacity: 0.7;
+
+            margin-top: 5px;
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 600px) {
+
+            .gift-page {
+                padding: 8px;
+            }
+
+            .top-text {
+                font-size: 17px;
+            }
+
+            h1 {
+                font-size: 29px;
+            }
+
+            .subtitle {
+                font-size: 17px;
+
+                margin-bottom: 11px;
+            }
+
+            .gift-grid {
+                width: 92vw;
+
+                gap: 11px;
+            }
+
+            .gift {
+                height: 115px;
+
+                border-radius: 18px;
+            }
+
+            .gift-icon {
+                font-size: 36px;
+            }
+
+            .gift-ribbon {
+                font-size: 21px;
+            }
+
+            .gift-title {
+                font-size: 14px;
+            }
+
+            .bottom-text {
+                font-size: 17px;
+
+                margin-top: 10px;
+            }
+
+            .emoji {
+                font-size: 19px;
+            }
+
+            .popup {
+                width: 88vw;
+
+                padding: 25px 20px;
+            }
+
+            .popup-icon {
+                font-size: 40px;
+            }
+
+            .popup h2 {
+                font-size: 23px;
+            }
+
+            .popup p {
+                font-size: 20px;
+            }
+        }
+
+
+        /* =========================
+           SHORT LAPTOP SCREEN
+        ========================= */
+
+        @media (max-height: 650px) {
+
+            .gift {
+                height: 105px;
+            }
+
+            .gift-icon {
+                font-size: 32px;
+            }
+
+            .gift-ribbon {
+                font-size: 20px;
+            }
+
+            .subtitle {
+                margin-bottom: 8px;
+            }
+
+            .bottom-text {
+                margin-top: 7px;
+            }
+        }
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- =========================================
+         FLOATING BACKGROUND EMOJIS
+    ========================================== -->
+
+    <div class="emoji-background">
+
+        <span class="emoji">❤️</span>
+        <span class="emoji">😘</span>
+        <span class="emoji">💜</span>
+        <span class="emoji">💋</span>
+        <span class="emoji">💕</span>
+        <span class="emoji">❤️</span>
+        <span class="emoji">😘</span>
+        <span class="emoji">💖</span>
+        <span class="emoji">💋</span>
+        <span class="emoji">💜</span>
+        <span class="emoji">💕</span>
+        <span class="emoji">😘</span>
+        <span class="emoji">❤️</span>
+        <span class="emoji">💋</span>
+
+    </div>
+
+
+
+    <!-- =========================================
+         MAIN GIFT PAGE
+    ========================================== -->
+
+    <main class="gift-page">
+
+
+        <div class="top-text">
+            💜 A Little Surprise For You 💜
+        </div>
+
+
+        <h1>
+            Four Little Gifts 🎁
+        </h1>
+
+
+        <p class="subtitle">
+            Choose a gift and discover your surprise ✨
+        </p>
+
+
+
+        <!-- =====================================
+             4 GIFT BOXES
+             2 TOP + 2 BOTTOM
+        ====================================== -->
+
+        <div class="gift-grid">
+
+
+            <!-- GIFT 1 -->
+
+            <div class="gift" onclick="openGift(1)">
+
+                <div class="gift-ribbon">
+                    🎀
+                </div>
+
+                <div class="gift-icon">
+                    🎁
+                </div>
+
+                <div class="gift-title">
+                    Gift One
+                </div>
+
+            </div>
+
+
+
+            <!-- GIFT 2 -->
+
+            <div class="gift" onclick="openGift(2)">
+
+                <div class="gift-ribbon">
+                    🎀
+                </div>
+
+                <div class="gift-icon">
+                    🎁
+                </div>
+
+                <div class="gift-title">
+                    Gift Two
+                </div>
+
+            </div>
+
+
+
+            <!-- GIFT 3 -->
+
+            <div class="gift" onclick="openGift(3)">
+
+                <div class="gift-ribbon">
+                    🎀
+                </div>
+
+                <div class="gift-icon">
+                    🎁
+                </div>
+
+                <div class="gift-title">
+                    Gift Three
+                </div>
+
+            </div>
+
+
+
+            <!-- GIFT 4 -->
+
+            <div class="gift" onclick="openGift(4)">
+
+                <div class="gift-ribbon">
+                    🎀
+                </div>
+
+                <div class="gift-icon">
+                    🎁
+                </div>
+
+                <div class="gift-title">
+                    Gift Four
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+
+        <p class="bottom-text">
+            💕 Something special is waiting for you... 💕
+        </p>
+
+<div style="
+    display:flex;
+    justify-content:center;
+    width:100%;
+    margin-top:10px;
+    position:relative;
+    z-index:99999;
+">
+    <button
+        onclick="window.location.href='surprise.html'"
+        style="
+            display:block;
+            padding:12px 28px;
+            border:none;
+            border-radius:30px;
+            background:linear-gradient(135deg,#d47bea,#7b32a8);
+            color:white;
+            font-family:'Pacifico',cursive;
+            font-size:15px;
+            cursor:pointer;
+            box-shadow:0 6px 20px rgba(0,0,0,0.35);
+        "
+    >
+        Continue the surprise Babe💋 !!
+    </button>
+</div>
+    </main>
+
+
+
+    <!-- =========================================
+         POPUP
+    ========================================== -->
+
+    <div
+        class="popup-overlay"
+        id="popupOverlay"
+        onclick="closeOutside(event)"
+    >
+
+
+        <div class="popup" id="popupBox">
+
+
+            <div
+                class="popup-icon"
+                id="popupIcon"
+            >
+                💜
+            </div>
+
+
+            <h2 id="popupTitle">
+                A Special Surprise
+            </h2>
+
+
+            <p id="popupMessage">
+                Something special is waiting for you!
+            </p>
+
+
+            <div class="close-hint">
+                Tap anywhere outside to close ✨
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- =========================================
+         JAVASCRIPT
+    ========================================== -->
+
+    <script>
+
+        function openGift(number) {
+
+            const overlay =
+                document.getElementById("popupOverlay");
+
+            const icon =
+                document.getElementById("popupIcon");
+
+            const title =
+                document.getElementById("popupTitle");
+
+            const message =
+                document.getElementById("popupMessage");
+
+
+            if (number === 1) {
+
+                icon.textContent = "💜";
+
+                title.textContent =
+                    "A Special Memory";
+
+                message.textContent =
+                    "Some memories are small moments that become beautiful forever. 💜";
+
+            }
+
+
+            else if (number === 2) {
+
+                icon.textContent = "😘";
+
+                title.textContent =
+                    "Lots Of Happiness";
+
+                message.textContent =
+                    "May your life always be filled with happiness, smiles and beautiful moments. 😘";
+
+            }
+
+
+            else if (number === 3) {
+
+                icon.textContent = "💋";
+
+                title.textContent =
+                    "A Little Surprise";
+
+                message.textContent =
+                    "This little gift is just a small reminder of how special you are. 💋";
+
+            }
+
+
+            else if (number === 4) {
+
+                icon.textContent = "❤️";
+
+                title.textContent =
+                    "The Biggest Surprise";
+
+                message.textContent =
+                    "Your biggest surprise is waiting for you... ❤️✨";
+
+            }
+
+
+            overlay.classList.add("show");
+
+        }
+
+
+
+        /* =====================================
+           CLOSE POPUP
+           Only outside click
+        ====================================== */
+
+        function closeOutside(event) {
+
+            const popup =
+                document.getElementById("popupBox");
+
+            const overlay =
+                document.getElementById("popupOverlay");
+
+
+            if (event.target === overlay) {
+
+                overlay.classList.remove("show");
+
+            }
+
+        }
+
+
+
+        /* =====================================
+           ESC KEY ALSO CLOSES POPUP
+        ====================================== */
+
+        document.addEventListener(
+            "keydown",
+            function(event) {
+
+                if (event.key === "Escape") {
+
+                    document
+                        .getElementById("popupOverlay")
+                        .classList.remove("show");
+
+                }
+
+            }
+        );
+
+    </script>
+
+<div class="next-page">
+    <button onclick="window.location.href='cake.html'">
+        Continue to Birthday Cake 🎂
+    </button>
+</div>
+</body>
+
+</html>

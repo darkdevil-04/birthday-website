@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Why You're Special 💖</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="theme.css">
+
+    <style>
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .special-container {
+            width: 92%;
+            max-width: 760px;
+            height: 88vh;
+            max-height: 90vh;
+
+            padding: 20px;
+
+            box-sizing: border-box;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            text-align: center;
+
+            background: transparent;
+            border: none;
+            border-radius: 30px;
+
+            box-shadow: 0 18px 45px rgba(130, 70, 110, 0.18);
+
+            backdrop-filter: blur(14px);
+
+            overflow: hidden;
+        }
+
+        .special-cartoon {
+            font-size: 40px;
+
+            animation: specialFloat 2.5s ease-in-out infinite;
+        }
+
+        .special-container h1 {
+            font-family: Georgia, serif;
+            font-style: italic;
+
+            font-size: clamp(28px, 5vw, 42px);
+
+            margin: 4px 0;
+        }
+
+        .special-subtitle {
+            font-size: 12px;
+
+            margin: 3px 0 16px;
+        }
+
+
+        /* CARDS */
+
+        .special-grid {
+            width: 94%;
+
+            display: grid;
+
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 12px;
+
+            margin-bottom: 15px;
+        }
+
+        .special-card {
+            min-height: 125px;
+
+            padding: 15px 10px;
+
+            box-sizing: border-box;
+
+            border-radius: 20px;
+
+            background: rgba(255, 255, 255, 0.62);
+
+            cursor: pointer;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            transition:
+                transform 0.3s ease,
+                box-shadow 0.3s ease;
+        }
+
+        .special-card:hover {
+            transform: translateY(-6px) scale(1.02);
+
+            box-shadow:
+                0 10px 25px rgba(170, 70, 120, 0.18);
+        }
+
+        .special-icon {
+            font-size: 38px;
+
+            margin-bottom: 7px;
+        }
+
+        .special-card h3 {
+            font-size: 13px;
+
+            margin: 0 0 5px;
+
+            color: #a84270;
+        }
+
+        .special-card p {
+            font-size: 10px;
+
+            line-height: 1.4;
+
+            margin: 0;
+
+            color: #665867;
+        }
+
+
+        /* NEXT BUTTON */
+
+        .special-next {
+            padding: 10px 23px;
+
+            border: none;
+
+            border-radius: 25px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #ff9fc5,
+                    #cda5ff
+                );
+
+            color: white;
+
+            font-size: 12px;
+
+            cursor: pointer;
+
+            flex-shrink: 0;
+        }
+
+
+        /* ANIMATION */
+
+        @keyframes specialFloat {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-8px);
+            }
+        }
+
+
+        /* MOBILE */
+
+        @media (max-width: 600px) {
+
+            .special-container {
+                width: 94%;
+                height: 90vh;
+
+                padding: 14px 10px;
+            }
+
+            .special-cartoon {
+                font-size: 30px;
+            }
+
+            .special-container h1 {
+                font-size: 27px;
+            }
+
+            .special-subtitle {
+                font-size: 10px;
+                margin-bottom: 10px;
+            }
+
+            .special-grid {
+                width: 97%;
+                gap: 7px;
+            }
+
+            .special-card {
+                min-height: 105px;
+                padding: 9px 5px;
+            }
+
+            .special-icon {
+                font-size: 29px;
+            }
+
+            .special-card h3 {
+                font-size: 10px;
+            }
+
+            .special-card p {
+                font-size: 8px;
+            }
+
+            .special-next {
+                font-size: 10px;
+                padding: 9px 18px;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+    <div class="love-bg">
+    <span>❤️</span>
+    <span>💕</span>
+    <span>💜</span>
+    <span>😘</span>
+    <span>💋</span>
+    <span>💖</span>
+    <span>💕</span>
+    <span>❤️</span>
+    <span>💜</span>
+    <span>😘</span>
+</div>
+
+    <div class="special-container">
+
+        <div class="special-cartoon">
+            🐼💕✨
+        </div>
+
+
+        <h1>
+            Why You're Special 💖
+        </h1>
+
+
+        <p class="special-subtitle">
+            Just a few little things that make you... YOU 🌸
+        </p>
+
+
+        <div class="special-grid">
+
+            <!-- CARD 1 -->
+
+            <div class="special-card">
+
+                <div class="special-icon">
+                    😊
+                </div>
+
+                <h3>
+                    Your Smile
+                </h3>
+
+                <p>
+                    Your smile can make an ordinary moment feel brighter.
+                </p>
+
+            </div>
+
+
+            <!-- CARD 2 -->
+
+            <div class="special-card">
+
+                <div class="special-icon">
+                    💗
+                </div>
+
+                <h3>
+                    Your Heart
+                </h3>
+
+                <p>
+                    Your kindness makes you genuinely special.
+                </p>
+
+            </div>
+
+
+            <!-- CARD 3 -->
+
+            <div class="special-card">
+
+                <div class="special-icon">
+                    ✨
+                </div>
+
+                <h3>
+                    Your Vibe
+                </h3>
+
+                <p>
+                    There is something uniquely wonderful about you.
+                </p>
+
+            </div>
+
+
+            <!-- CARD 4 -->
+
+            <div class="special-card">
+
+                <div class="special-icon">
+                    🌸
+                </div>
+
+                <h3>
+                    Little Things
+                </h3>
+
+                <p>
+                    Even the smallest things about you are memorable.
+                </p>
+
+            </div>
+
+
+            <!-- CARD 5 -->
+
+            <div class="special-card">
+
+                <div class="special-icon">
+                    🧸
+                </div>
+
+                <h3>
+                    Your Cuteness
+                </h3>
+
+                <p>
+                    You have your own adorable way of making moments special.
+                </p>
+
+            </div>
+
+
+            <!-- CARD 6 -->
+
+            <div class="special-card">
+
+                <div class="special-icon">
+                    🌷
+                </div>
+
+                <h3>
+                    Simply You
+                </h3>
+
+                <p>
+                    The best thing is simply being yourself.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <button
+            class="special-next"
+            onclick="window.location.href='custom.html'">
+
+            This is for My Heart😚🌎
+
+        </button>
+
+    </div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>One More Surprise 💕</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="theme.css">
+
+    <style>
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .surprise-container {
+            width: 90%;
+            max-width: 650px;
+            height: 86vh;
+            max-height: 90vh;
+
+            padding: 25px 20px;
+            box-sizing: border-box;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            text-align: center;
+
+            background: rgba(255, 255, 255, 0.43);
+            border: 1px solid rgba(255, 255, 255, 0.75);
+            border-radius: 32px;
+
+            box-shadow: 0 18px 45px rgba(130, 70, 110, 0.18);
+            backdrop-filter: blur(14px);
+
+            position: relative;
+            overflow: hidden;
+        }
+
+        .surprise-cartoon {
+            font-size: 75px;
+            margin-bottom: 10px;
+
+            animation: teddyFloat 2.5s ease-in-out infinite;
+        }
+
+        .sparkles {
+            font-size: 22px;
+            letter-spacing: 8px;
+            margin-bottom: 12px;
+
+            animation: sparkle 2s ease-in-out infinite;
+        }
+
+        .surprise-container h1 {
+            font-family: Georgia, serif;
+            font-style: italic;
+
+            font-size: clamp(28px, 5vw, 43px);
+
+            margin: 5px 0 10px;
+        }
+
+        .surprise-container h1 span {
+            color: #c84d83;
+        }
+
+        .question {
+            font-size: 15px;
+            line-height: 1.6;
+
+            width: 85%;
+            max-width: 520px;
+
+            color: #625463;
+
+            margin-bottom: 22px;
+        }
+
+        .button-area {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .surprise-button {
+            border: none;
+            border-radius: 30px;
+
+            padding: 12px 22px;
+
+            font-size: 13px;
+            font-weight: 600;
+
+            color: white;
+
+            background: linear-gradient(
+                135deg,
+                #ff9fc5,
+                #cda5ff
+            );
+
+            cursor: pointer;
+
+            box-shadow: 0 8px 20px rgba(190, 90, 140, 0.22);
+
+            transition: 0.3s ease;
+        }
+
+        .surprise-button:hover {
+            transform: translateY(-4px) scale(1.04);
+        }
+
+        .hidden-message {
+            display: none;
+
+            margin-top: 20px;
+
+            padding: 15px 20px;
+
+            width: 82%;
+            max-width: 500px;
+
+            border-radius: 20px;
+
+            background: rgba(255, 255, 255, 0.7);
+
+            color: #a84270;
+
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .hidden-message.show {
+            display: block;
+            animation: revealMessage 0.7s ease;
+        }
+
+        .continue-button {
+            display: none;
+
+            margin-top: 15px;
+
+            padding: 10px 23px;
+
+            border: none;
+            border-radius: 25px;
+
+            background: linear-gradient(
+                135deg,
+                #f58eb6,
+                #b994f5
+            );
+
+            color: white;
+
+            font-size: 12px;
+
+            cursor: pointer;
+        }
+
+        .continue-button.show {
+            display: inline-block;
+            animation: revealMessage 0.5s ease;
+        }
+
+        /* Floating hearts */
+
+        .heart {
+            position: absolute;
+
+            font-size: 20px;
+
+            opacity: 0;
+
+            pointer-events: none;
+        }
+
+        .heart:nth-child(1) {
+            left: 12%;
+            top: 20%;
+        }
+
+        .heart:nth-child(2) {
+            right: 12%;
+            top: 25%;
+        }
+
+        .heart:nth-child(3) {
+            left: 18%;
+            bottom: 18%;
+        }
+
+        .heart:nth-child(4) {
+            right: 18%;
+            bottom: 20%;
+        }
+
+        .celebrate .heart {
+            animation: heartPop 2s ease-in-out infinite;
+            opacity: 1;
+        }
+
+        @keyframes teddyFloat {
+
+            0%,
+            100% {
+                transform: translateY(0) rotate(0);
+            }
+
+            50% {
+                transform: translateY(-10px) rotate(2deg);
+            }
+        }
+
+        @keyframes sparkle {
+
+            0%,
+            100% {
+                opacity: 0.7;
+                transform: scale(1);
+            }
+
+            50% {
+                opacity: 1;
+                transform: scale(1.15);
+            }
+        }
+
+        @keyframes revealMessage {
+
+            from {
+                opacity: 0;
+                transform: translateY(15px) scale(0.95);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        @keyframes heartPop {
+
+            0% {
+                transform: translateY(10px) scale(0.7);
+            }
+
+            50% {
+                transform: translateY(-12px) scale(1.15);
+            }
+
+            100% {
+                transform: translateY(10px) scale(0.7);
+            }
+        }
+
+        @media (max-width: 600px) {
+
+            .surprise-container {
+                width: 93%;
+                height: 88vh;
+                padding: 18px 12px;
+            }
+
+            .surprise-cartoon {
+                font-size: 55px;
+            }
+
+            .sparkles {
+                font-size: 17px;
+                letter-spacing: 5px;
+            }
+
+            .surprise-container h1 {
+                font-size: 28px;
+            }
+
+            .question {
+                font-size: 12px;
+                width: 92%;
+            }
+
+            .surprise-button {
+                font-size: 11px;
+                padding: 10px 17px;
+            }
+
+            .hidden-message {
+                font-size: 11px;
+                padding: 12px;
+            }
+        }
+    </style>
+
+</head>
+
+
+<body>
+    <div class="love-bg">
+    <span>❤️</span>
+    <span>💕</span>
+    <span>💜</span>
+    <span>😘</span>
+    <span>💋</span>
+    <span>💖</span>
+    <span>💕</span>
+    <span>❤️</span>
+    <span>💜</span>
+    <span>😘</span>
+</div>
+
+    <div class="surprise-container" id="surpriseBox">
+
+        <!-- Floating hearts -->
+
+        <div class="heart">💗</div>
+        <div class="heart">💕</div>
+        <div class="heart">💖</div>
+        <div class="heart">💞</div>
+
+
+        <div class="surprise-cartoon">
+            🧸🎀
+        </div>
+
+
+        <div class="sparkles">
+            ✨ ♡ ✨ ♡ ✨
+        </div>
+
+
+        <h1>
+            One More
+            <span>Surprise</span> 💌
+        </h1>
+
+
+        <p class="question">
+            Before you continue... I have one tiny question for you. 🌸
+            <br>
+            Are you ready for another little surprise?
+        </p>
+
+
+        <div class="button-area">
+
+            <button
+                class="surprise-button"
+                onclick="showSurprise()">
+
+                YES 💖
+
+            </button>
+
+
+            <button
+                class="surprise-button"
+                onclick="showSurprise()">
+
+                OF COURSE! 🥰
+
+            </button>
+
+        </div>
+
+
+        <div
+            id="hiddenMessage"
+            class="hidden-message">
+
+            🎉 You found it! 🎉
+            <br><br>
+
+            This little surprise is just a reminder that
+            today is all about celebrating you
+            and your a my only surprise My Girl💖✨
+
+        </div>
+
+
+        <button
+            id="continueButton"
+            class="continue-button"
+            onclick="window.location.href='cake.html'">
+
+            Let's Go To The Cake 🎂
+
+        </button>
+
+    </div>
+
+
+    <script>
+
+        function showSurprise() {
+
+            const box =
+                document.getElementById("surpriseBox");
+
+            const message =
+                document.getElementById("hiddenMessage");
+
+            const button =
+                document.getElementById("continueButton");
+
+            box.classList.add("celebrate");
+
+            message.classList.add("show");
+
+            button.classList.add("show");
+
+        }
+
+    </script>
+
+</body>
+
+</html>

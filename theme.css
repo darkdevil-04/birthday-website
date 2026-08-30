@@ -1,0 +1,317 @@
+/* =========================================
+   COMMON LOVE THEME - ALL 10 PAGES
+   ========================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Pacifico&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+
+    background:
+        radial-gradient(circle at 20% 20%, rgba(255, 180, 240, 0.25), transparent 30%),
+        radial-gradient(circle at 80% 80%, rgba(190, 130, 255, 0.25), transparent 30%),
+        linear-gradient(135deg, #24102f, #542267, #7d3f91, #351446);
+
+    color: #ffffff;
+    font-family: "Caveat", cursive;
+}
+
+
+/* =========================================
+   FLOATING LOVE EMOJIS
+   ========================================= */
+
+.love-bg {
+    position: fixed;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+    pointer-events: none;
+
+    z-index: 0;
+}
+
+.love-bg span {
+    position: absolute;
+    bottom: -70px;
+
+    font-size: 25px;
+    opacity: 0.75;
+
+    animation: loveFlow 10s linear infinite;
+}
+
+.love-bg span:nth-child(1) {
+    left: 5%;
+    animation-delay: 0s;
+}
+
+.love-bg span:nth-child(2) {
+    left: 15%;
+    animation-delay: 2s;
+}
+
+.love-bg span:nth-child(3) {
+    left: 25%;
+    animation-delay: 4s;
+}
+
+.love-bg span:nth-child(4) {
+    left: 35%;
+    animation-delay: 1s;
+}
+
+.love-bg span:nth-child(5) {
+    left: 45%;
+    animation-delay: 5s;
+}
+
+.love-bg span:nth-child(6) {
+    left: 55%;
+    animation-delay: 3s;
+}
+
+.love-bg span:nth-child(7) {
+    left: 65%;
+    animation-delay: 6s;
+}
+
+.love-bg span:nth-child(8) {
+    left: 75%;
+    animation-delay: 2.5s;
+}
+
+.love-bg span:nth-child(9) {
+    left: 85%;
+    animation-delay: 4.5s;
+}
+
+.love-bg span:nth-child(10) {
+    left: 93%;
+    animation-delay: 1.5s;
+}
+
+@keyframes loveFlow {
+
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 0.8;
+    }
+
+    90% {
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: translateY(-115vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+
+/* =========================================
+   ALL PAGE CONTENT
+   NO WHITE OUTER BOX
+   ========================================= */
+
+.welcome-container,
+.message-container,
+.letter-container,
+.gift-container,
+.cake-container,
+.memory-container,
+.wishes-container,
+.surprise-container,
+.song-container,
+.final-container {
+    position: relative;
+    z-index: 2;
+
+    background: transparent !important;
+
+    border: none !important;
+
+    box-shadow: none !important;
+}
+
+
+/* =========================================
+   INNER MESSAGE BOXES
+   ALSO BLEND WITH BACKGROUND
+   ========================================= */
+
+.message-box {
+    background: rgba(255, 255, 255, 0.08);
+
+    border: 1px solid rgba(255, 255, 255, 0.18);
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.18);
+
+    backdrop-filter: blur(4px);
+}
+
+
+/* =========================================
+   HEADINGS
+   ========================================= */
+
+h1,
+h2 {
+    font-family: "Pacifico", cursive;
+
+    text-shadow:
+        0 3px 12px rgba(255, 170, 245, 0.35);
+}
+
+
+/* =========================================
+   NORMAL CONTENT
+   ========================================= */
+
+p,
+.small-text,
+.hint,
+.last-line {
+    font-family: "Caveat", cursive;
+}
+
+
+/* =========================================
+   BUTTONS
+   ========================================= */
+
+button {
+    font-family: "Caveat", cursive;
+
+    background: linear-gradient(
+        135deg,
+        #d47bea,
+        #9145b5,
+        #62267e
+    ) !important;
+
+    color: #ffffff !important;
+
+    border: 2px solid rgba(255, 255, 255, 0.45) !important;
+
+    border-radius: 30px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 22px rgba(30, 5, 45, 0.45),
+        0 0 18px rgba(220, 150, 255, 0.35);
+
+    transition: 0.3s ease;
+}
+
+button:hover {
+    transform: translateY(-3px) scale(1.04);
+}
+
+
+/* =========================================
+   IMAGES
+   ========================================= */
+
+img {
+    max-width: 100%;
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 600px) {
+
+    .love-bg span {
+        font-size: 20px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    button {
+        font-size: 15px;
+    }
+
+    .message-box {
+        border-radius: 16px;
+    }
+}
+/* ===== BRIGHT TEXT FOR ALL PAGES ===== */
+
+body {
+    color: #ffffff !important;
+}
+
+h1,
+h2,
+h3,
+p,
+span,
+.small-text,
+.hint,
+.last-line,
+.message-box p {
+    color: #ffffff !important;
+    text-shadow: 0 2px 8px rgba(255, 255, 255, 0.25);
+}
+
+h1,
+h2,
+h3 {
+    text-shadow:
+        0 2px 12px rgba(255, 255, 255, 0.45),
+        0 0 18px rgba(255, 190, 255, 0.35);
+}
+/* ===== MEMORIES PAGE ONLY ===== */
+
+/* Remove outer white box */
+.memory-container {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+/* Photo small box words bright */
+.memory-box,
+.memory-card,
+.photo-card {
+    color: #ffffff !important;
+}
+
+.memory-box p,
+.memory-card p,
+.photo-card p,
+.memory-box span,
+.memory-card span,
+.photo-card span {
+    color: #ffffff !important;
+    text-shadow: 0 2px 8px rgba(255, 255, 255, 0.5);
+}

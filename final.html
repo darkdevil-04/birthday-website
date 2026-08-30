@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>One Last Surprise 💖</title>
+
+    <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="theme.css">
+    <style>
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        body {
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            background:
+                radial-gradient(
+                    circle at 20% 20%,
+                    #ffd1e4,
+                    transparent 35%
+                ),
+                radial-gradient(
+                    circle at 80% 80%,
+                    #dfcaff,
+                    transparent 35%
+                ),
+                linear-gradient(
+                    135deg,
+                    #ffdbea,
+                    #f3ddff,
+                    #ffe9f2
+                );
+
+            position: relative;
+        }
+
+
+        /* FLOWING HEARTS */
+
+        .hearts {
+
+            position: fixed;
+
+            inset: 0;
+
+            overflow: hidden;
+
+            pointer-events: none;
+
+            z-index: 0;
+        }
+
+
+        .hearts span {
+
+            position: absolute;
+
+            bottom: -40px;
+
+            font-size: 22px;
+
+            animation:
+                heartUp 8s linear infinite;
+
+            opacity: 0;
+        }
+
+
+        .hearts span:nth-child(1) {
+            left: 5%;
+        }
+
+        .hearts span:nth-child(2) {
+            left: 18%;
+            animation-delay: 1s;
+        }
+
+        .hearts span:nth-child(3) {
+            left: 32%;
+            animation-delay: 3s;
+        }
+
+        .hearts span:nth-child(4) {
+            left: 48%;
+            animation-delay: 5s;
+        }
+
+        .hearts span:nth-child(5) {
+            left: 63%;
+            animation-delay: 2s;
+        }
+
+        .hearts span:nth-child(6) {
+            left: 78%;
+            animation-delay: 4s;
+        }
+
+        .hearts span:nth-child(7) {
+            left: 91%;
+            animation-delay: 6s;
+        }
+
+
+        @keyframes heartUp {
+
+            0% {
+
+                transform:
+                    translateY(0)
+                    scale(.6);
+
+                opacity: 0;
+
+            }
+
+            15% {
+                opacity: .7;
+            }
+
+            100% {
+
+                transform:
+                    translateY(-115vh)
+                    translateX(25px)
+                    scale(1.2)
+                    rotate(15deg);
+
+                opacity: 0;
+
+            }
+
+        }
+
+
+        /* MAIN BOX */
+
+        .final-container {
+
+            width: 90%;
+
+            max-width: 700px;
+
+            height: 88vh;
+
+            box-sizing: border-box;
+
+            padding: 22px;
+
+            display: flex;
+
+            flex-direction: column;
+
+            justify-content: center;
+
+            align-items: center;
+
+            text-align: center;
+
+            background:
+                rgba(255,255,255,.58);
+
+            border:
+                1px solid
+                rgba(255,255,255,.85);
+
+            border-radius: 35px;
+
+            box-shadow:
+                0 20px 55px
+                rgba(130,70,120,.2);
+
+            backdrop-filter:
+                blur(16px);
+
+            position: relative;
+
+            z-index: 2;
+
+            overflow: hidden;
+        }
+
+
+        /* TOP */
+
+        .final-top {
+
+            font-size: 25px;
+
+            letter-spacing: 8px;
+
+            margin-bottom: 3px;
+
+            animation:
+                sparkle 2s infinite
+                ease-in-out;
+        }
+
+
+        .final-container h1 {
+
+            font-family:
+                Georgia,
+                serif;
+
+            font-style: italic;
+
+            font-size:
+                clamp(29px,5vw,45px);
+
+            margin:
+                3px 0;
+
+            color: #8e3c68;
+        }
+
+
+        .final-subtitle {
+
+            font-size: 13px;
+
+            color: #765969;
+
+            margin:
+                2px 0 12px;
+        }
+
+
+        /* FINAL IMAGE */
+
+        .final-image {
+
+            width: 245px;
+
+            height: 245px;
+
+            object-fit: cover;
+
+            border-radius: 50%;
+
+            border:
+                6px solid
+                rgba(255,255,255,.85);
+
+            box-shadow:
+                0 12px 35px
+                rgba(150,70,120,.22);
+
+            animation:
+                imageFloat 3s
+                ease-in-out infinite;
+
+        }
+
+
+        /* MESSAGE */
+
+        .final-message {
+
+            max-width: 560px;
+
+            font-family:
+                "Segoe Print",
+                "Comic Sans MS",
+                cursive;
+
+            font-size: 14px;
+
+            line-height: 1.7;
+
+            color: #624b5b;
+
+            margin:
+                10px 0 8px;
+        }
+
+
+        .final-wish {
+
+            font-family:
+                Georgia,
+                serif;
+
+            font-style: italic;
+
+            font-size: 17px;
+
+            color: #a13e70;
+
+            margin:
+                3px 0 12px;
+        }
+
+
+        /* HEART BUTTON */
+
+        .heart-button {
+
+            border: none;
+
+            padding:
+                11px 25px;
+
+            border-radius: 30px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #ff83b5,
+                    #bd91ff
+                );
+
+            color: #E6E6FA;
+
+            font-size: 12px;
+
+            cursor: pointer;
+
+            box-shadow:
+                0 9px 23px
+                rgba(170,80,140,.25);
+
+            transition:
+                .3s ease;
+
+        }
+
+
+        .heart-button:hover {
+
+            transform:
+                scale(1.06)
+                translateY(-3px);
+
+        }
+
+
+        /* FINAL POPUP */
+
+        .love-message {
+
+            display: none;
+
+            position: absolute;
+
+            inset: 0;
+
+            background:
+                rgba(255,225,240,.93);
+
+            z-index: 20;
+
+            align-items: center;
+
+            justify-content: center;
+
+            flex-direction: column;
+
+            padding: 25px;
+
+            box-sizing: border-box;
+
+        }
+
+
+        .love-message.show {
+
+            display: flex;
+
+            animation:
+                popup .6s ease;
+
+        }
+
+
+        .love-message .big-heart {
+
+            font-size: 70px;
+
+            animation:
+                heartbeat 1s
+                infinite;
+        }
+
+
+        .love-message h2 {
+
+            font-family:
+                Georgia,
+                serif;
+
+            font-style: italic;
+
+            color: #923c69;
+
+            font-size: 30px;
+
+            margin: 8px 0;
+
+        }
+
+
+        .love-message p {
+
+            max-width: 430px;
+
+            font-family:
+                "Segoe Print",
+                cursive;
+
+            font-size: 14px;
+
+            line-height: 1.7;
+
+          color: #8A2BE2 !important;
+        }
+
+
+        /* ANIMATIONS */
+
+        @keyframes imageFloat {
+
+            0%,100% {
+
+                transform:
+                    translateY(0);
+
+            }
+
+            50% {
+
+                transform:
+                    translateY(-8px);
+
+            }
+
+        }
+
+
+        @keyframes sparkle {
+
+            0%,100% {
+
+                transform:
+                    scale(1);
+
+            }
+
+            50% {
+
+                transform:
+                    scale(1.1);
+
+            }
+
+        }
+
+
+        @keyframes heartbeat {
+
+            0%,100% {
+
+                transform:
+                    scale(1);
+
+            }
+
+            50% {
+
+                transform:
+                    scale(1.15);
+
+            }
+
+        }
+
+
+        @keyframes popup {
+
+            from {
+
+                opacity: 0;
+
+                transform:
+                    scale(.9);
+
+            }
+
+            to {
+
+                opacity: 1;
+
+                transform:
+                    scale(1);
+
+            }
+
+        }
+
+
+        /* MOBILE */
+
+        @media (max-width:600px) {
+
+            .final-container {
+
+                width: 94%;
+
+                height: 90vh;
+
+                padding:
+                    15px 10px;
+
+            }
+
+
+            .final-top {
+
+                font-size: 19px;
+
+            }
+
+
+            .final-container h1 {
+
+                font-size: 28px;
+
+            }
+
+
+            .final-subtitle {
+
+                font-size: 10px;
+
+            }
+
+
+            .final-image {
+
+                width: 185px;
+
+                height: 185px;
+
+            }
+
+
+            .final-message {
+
+                font-size: 11px;
+
+                line-height: 1.6;
+
+            }
+
+
+            .final-wish {
+
+                font-size: 14px;
+
+            }
+
+
+            .heart-button {
+
+                font-size: 10px;
+
+                padding:
+                    9px 20px;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+<div class="love-bg">
+    <span>❤️</span>
+    <span>💕</span>
+    <span>💜</span>
+    <span>😘</span>
+    <span>💋</span>
+    <span>💖</span>
+    <span>💕</span>
+    <span>❤️</span>
+    <span>💜</span>
+    <span>😘</span>
+</div>
+
+    <!-- FLOWING HEARTS -->
+
+    <div class="hearts">
+
+        <span>💗</span>
+        <span>💕</span>
+        <span>💖</span>
+        <span>💞</span>
+        <span>💓</span>
+        <span>💗</span>
+        <span>💕</span>
+
+    </div>
+
+
+    <!-- MAIN -->
+
+    <div class="final-container">
+
+
+        <div class="final-top">
+
+            💗 ✨ 🎀 ✨ 💗
+
+        </div>
+
+
+        <h1>
+
+            Happy Birthday! 🎂
+
+        </h1>
+
+
+        <p class="final-subtitle">
+
+            This little surprise was made specially for you 💌
+
+        </p>
+
+
+        <!-- YOUR FINAL IMAGE -->
+
+        <img
+            src="images/final.jpeg"
+            class="final-image"
+            alt="Birthday Memory">
+
+
+        <p class="final-message">
+
+            I hope this little journey brought
+            a smile to your face. Every page,
+            every little detail and every surprise
+            was made specially for you. 💖
+
+        </p>
+
+
+        <p class="final-wish">
+
+            May your life always be filled
+            with happiness, love and beautiful memories. ✨
+
+        </p>
+
+
+        <button
+            class="heart-button"
+            onclick="showFinalMessage()">
+
+            💖 Last One For My AMMU 💖
+
+        </button>
+
+
+        <!-- POPUP -->
+
+        <div
+            class="love-message"
+            id="loveMessage">
+
+
+            <div class="big-heart">
+
+                💖
+
+            </div>
+
+
+            <h2>
+
+                For My Special One ✨
+
+            </h2>
+
+
+            <p>
+
+                Once again, wishing you the
+                happiest birthday! 🎂💗
+
+                <br><br>
+
+               Endrum Nee🎀 , Ethilum Nee💋 , Epothum Nee🧿
+
+                <br><br>
+
+                ஆயிரம் கவலைகளுக்கு நடுவே ஒரே நிம்மதி நீ!!🐣
+
+                <br><br>
+
+                நான் ரசித்த பெண் அல்லவா நீ , வாழ்ந்தாலும் செத்தாலும் உன்னோடு மட்டுமே!!🫀😘
+
+                <br><br>
+
+                ALWAYS I LOVE YOU MY DARLING 💋🧿
+               
+               
+            </p>
+
+
+        </div>
+
+
+    </div>
+
+
+    <script>
+
+        function showFinalMessage() {
+
+            document
+                .getElementById("loveMessage")
+                .classList.add("show");
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>

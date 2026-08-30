@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+   <title>This is for my Queen 🧚‍♀️</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="theme.css">
+
+    <style>
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+        }
+
+        body {
+
+            min-height: 100vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            overflow: hidden;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #ffd9e8,
+                    #f0ddff,
+                    #ffeaf3
+                );
+
+            position: relative;
+        }
+
+
+        /* HEART BACKGROUND */
+
+        .heart-bg {
+
+            position: fixed;
+
+            inset: 0;
+
+            overflow: hidden;
+
+            pointer-events: none;
+        }
+
+
+        .heart-bg span {
+
+            position: absolute;
+
+            bottom: -30px;
+
+            font-size: 20px;
+
+            opacity: .55;
+
+            animation:
+                floatHeart 9s linear infinite;
+        }
+
+
+        .heart-bg span:nth-child(1) {
+            left: 8%;
+        }
+
+        .heart-bg span:nth-child(2) {
+            left: 22%;
+            animation-delay: 2s;
+        }
+
+        .heart-bg span:nth-child(3) {
+            left: 40%;
+            animation-delay: 4s;
+        }
+
+        .heart-bg span:nth-child(4) {
+            left: 60%;
+            animation-delay: 1s;
+        }
+
+        .heart-bg span:nth-child(5) {
+            left: 78%;
+            animation-delay: 3s;
+        }
+
+        .heart-bg span:nth-child(6) {
+            left: 92%;
+            animation-delay: 5s;
+        }
+
+
+        @keyframes floatHeart {
+
+            0% {
+                transform:
+                    translateY(0)
+                    rotate(0);
+                opacity: 0;
+            }
+
+            15% {
+                opacity: .6;
+            }
+
+            100% {
+                transform:
+                    translateY(-115vh)
+                    rotate(25deg);
+                opacity: 0;
+            }
+        }
+
+
+        /* MAIN LETTER */
+
+        .letter-container {
+
+            width: 90%;
+
+            max-width: 700px;
+
+            height: 88vh;
+
+            box-sizing: border-box;
+
+            padding: 25px;
+
+            background:
+                rgba(255,255,255,.58);
+
+            border:
+                1px solid
+                rgba(255,255,255,.85);
+
+            border-radius: 32px;
+
+            box-shadow:
+                0 20px 50px
+                rgba(130,70,120,.18);
+
+            backdrop-filter:
+                blur(15px);
+
+            position: relative;
+
+            z-index: 2;
+
+            display: flex;
+
+            flex-direction: column;
+
+            align-items: center;
+        }
+
+
+        .letter-top {
+
+            text-align: center;
+
+            flex-shrink: 0;
+        }
+
+
+        .letter-top .icon {
+
+            font-size: 42px;
+
+            animation:
+                letterFloat 2.5s
+                ease-in-out infinite;
+        }
+
+
+        .letter-top h1 {
+
+            font-family:
+                Georgia,
+                serif;
+
+            font-style: italic;
+
+            font-size:
+                clamp(28px,5vw,43px);
+
+            margin:
+                4px 0;
+
+            color: #91456d;
+        }
+
+
+        .letter-top p {
+
+            font-size: 12px;
+
+            margin:
+                0 0 15px;
+
+            color: #725a69;
+        }
+
+
+        /* WRITING AREA */
+
+        .letter-paper {
+
+            width: 92%;
+
+            flex: 1;
+
+            min-height: 0;
+
+            padding: 20px;
+
+            box-sizing: border-box;
+
+            border-radius: 22px;
+
+            background:
+                rgba(255,255,255,.75);
+
+            border:
+                1px solid
+                rgba(220,160,190,.35);
+
+            box-shadow:
+                inset 0 0 20px
+                rgba(220,150,190,.08);
+
+            overflow-y: auto;
+        }
+
+
+        .letter-paper::-webkit-scrollbar {
+
+            width: 6px;
+        }
+
+
+        .letter-paper::-webkit-scrollbar-thumb {
+
+            border-radius: 10px;
+
+            background:
+                #e4a2bf;
+        }
+
+
+        /* YOUR CONTENT */
+
+        .your-message {
+
+            white-space: pre-wrap;
+
+            font-family:
+                "Segoe Print",
+                "Comic Sans MS",
+                cursive;
+
+            font-size: 15px;
+
+            line-height: 1.9;
+
+            color: #624b5b;
+
+            text-align: left;
+        }
+
+
+        .signature {
+
+            margin-top: 20px;
+
+            text-align: right;
+
+            font-family:
+                Georgia,
+                serif;
+
+            font-style: italic;
+
+            font-size: 17px;
+
+            color: #a54472;
+        }
+
+
+        /* BUTTON */
+
+        .letter-button {
+
+            flex-shrink: 0;
+
+            margin-top: 14px;
+
+            border: none;
+
+            border-radius: 25px;
+
+            padding:
+                11px 24px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #ff91bb,
+                    #c09aff
+                );
+
+            color: white;
+
+            font-size: 12px;
+
+            cursor: pointer;
+
+            box-shadow:
+                0 8px 20px
+                rgba(170,80,130,.2);
+        }
+
+
+        @keyframes letterFloat {
+
+            0%,100% {
+                transform:
+                    translateY(0);
+            }
+
+            50% {
+                transform:
+                    translateY(-8px);
+            }
+        }
+
+
+        /* MOBILE */
+
+        @media (max-width:600px) {
+
+            .letter-container {
+
+                width: 94%;
+
+                height: 90vh;
+
+                padding:
+                    15px 10px;
+            }
+
+
+            .letter-top .icon {
+
+                font-size: 32px;
+            }
+
+
+            .letter-top h1 {
+
+                font-size: 28px;
+            }
+
+
+            .letter-top p {
+
+                font-size: 10px;
+
+                margin-bottom: 10px;
+            }
+
+
+            .letter-paper {
+
+                width: 96%;
+
+                padding:
+                    15px;
+            }
+
+
+            .your-message {
+
+                font-size: 12px;
+
+                line-height: 1.8;
+            }
+
+
+            .signature {
+
+                font-size: 14px;
+            }
+
+
+            .letter-button {
+
+                font-size: 10px;
+
+                padding:
+                    9px 18px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+    <div class="love-bg">
+    <span>❤️</span>
+    <span>💕</span>
+    <span>💜</span>
+    <span>😘</span>
+    <span>💋</span>
+    <span>💖</span>
+    <span>💕</span>
+    <span>❤️</span>
+    <span>💜</span>
+    <span>😘</span>
+</div>
+
+
+    <!-- FLOWING HEARTS -->
+
+    <div class="heart-bg">
+
+        <span>💗</span>
+        <span>💕</span>
+        <span>💖</span>
+        <span>💞</span>
+        <span>💓</span>
+        <span>💗</span>
+
+    </div>
+
+
+    <div class="letter-container">
+
+
+        <div class="letter-top">
+
+            <div class="icon">
+                💌
+            </div>
+
+            <h1>
+                A Letter For You
+            </h1>
+
+            <p>
+                Some words from my heart... 💗
+            </p>
+
+        </div>
+
+
+        <!-- ONLY THIS AREA SCROLLS -->
+
+        <div class="letter-paper">
+
+
+            <div class="your-message">
+
+                நான் ரசித்தவள் !! 💗
+
+
+                 விடுவேன் என்று கனவில் கூட நினைத்து விடாதே...! மறப்பதற்கு நீ ஒன்றும் கனவு கிடையாது... என் உயிரோடு கலந்த நிஜம் நீ...!
+
+                 என் கண்கள் முடும் நேரத்திலும் என் நினைவில் வருவது நீ ... என் கண்கள் திறக்கும் போதும் முதலில் தேடுவது உன்னை ..!
+
+                 உன்னிடம் பேசாத ஒரு நாள் எனக்கு முழுமையான நாளாக இருப்பதில்லை... உன் குரலை கேட்காத நேரங்கள் என் மனதுக்குள் ஒர் அமைதியான வலியாகிறது...!
+
+                 உன்னை நேசிப்பது என் விருப்பம் மட்டுமல்ல... என் இதயம் எனக்கே தெரியாமல் உன்னைத் தேர்ந்தெடுத்த விதி...!
+
+                 நீ என்னை விட்டு எவ்வளவு தூரம் சென்றாலும், என் நினைவுகள் மட்டும் உன்னைத் தொடர்ந்து வரும்.. ஏனென்றால், தூரம் உடல்களுக்கு மட்டுமே ... காதலுக்கு அல்ல...!
+
+                 ஒரு நாள் உன்னை மறந்துவிடலாம் என்று நீ நினைத்தாலும் ... உன்னை மறக்க வேண்டும் என்று என் இதயத்திடம் சொன்னால், அது உன்னைத் தவிர வேறு யாரையும் காதலிக்க மறுக்கும் ...!
+
+                 என் வாழ்வின் கடைசி நொடி வரை உன்னை நேசிப்பேன்... உன் நினைவுகளோடு வாழ்ந்தாலும் சரி, உனக்காக காத்திருந்தாலும் சரி...உன்னை  மட்டும் ஒருபோதும் விடமாட்டேன்...!
+
+                 உன்னை விடுவேன் என்று கனவில் கூட நினைத்து விடாதே ...மறப்பதற்கு நீ ஒன்றும் கனவு கிடையாது நீ என் உயிர் !!
+
+                    --------------🩵🖤🩵 --------------
+
+
+                என் நிலவே..!!🌙
+
+
+                 நிலவிடம் கேட்டேன்,  “உன்னைப் போல அழகானவள் யார்?”  என்று…அது மெதுவாகச் சிரித்து,  “உன் காதலியைப் பார்” என்றது...!
+
+                 நிலவை ரசித்த என் கண்கள், உன்னை பார்த்ததும் நின்றுவிட்டது…ஏனென்றால், வானத்தில் இருக்கும் நிலவைவிட என் உலகத்தில் இருக்கும் நீயே அழகு...!
+
+                 நிலவு வானத்தில் இருந்தாலும், என் பார்வை உன்னிடமே… ஏனென்றால் நிலவு இரவை மட்டும் அழகாக்கும், நீ என் வாழ்க்கையையே அழகாக்குகிறாய்...!
+
+                 நிலவை ரசிக்க இரவு தேவைப்படலாம்… ஆனால், உன்னை ரசிக்க எந்த நேரமும் தேவையில்லை. நீ அருகில் இருந்தாலஎன் உலகமே நிலவொளியாகிவிடும்...!
+
+                 நிலவைப் பார்க்கும் ஒவ்வொரு இரவும், ஏனோ உன் நினைவு வருகிறது… நிலவு அழகாக இருப்பதாலா, இல்லை… என் மனதிற்கு பிடித்த இரண்டும் ஒரே மாதிரி அமைதியை தருவதாலா?
+
+                    --------------🩵🖤🩵 --------------
+
+
+            </div>
+
+
+            <div class="signature">
+
+                 ~ உனகானவன்...!!
+
+                 <br><br>
+
+                 11 : 11>>>🩵🖤
+
+            </div>
+
+
+        </div>
+
+
+        <button
+            class="letter-button"
+            onclick="window.location.href='final.html'">
+
+            Last one for my World🌎😘
+
+        </button>
+
+
+    </div>
+
+
+</body>
+
+</html>

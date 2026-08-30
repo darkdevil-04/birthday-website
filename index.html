@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Birthday Surprise 🎂</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="theme.css">
+
+    <!-- Stylish Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Pacifico&display=swap"
+        rel="stylesheet">
+
+    <style>
+        /* ===== WELCOME PAGE ONLY ===== */
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .welcome-container {
+            width: 90%;
+            max-width: 600px;
+            height: auto;
+            max-height: 94vh;
+            min-height: auto;
+
+            padding: 22px 20px;
+            margin: 0 auto;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            text-align: center;
+            overflow: hidden;
+        }
+
+        /* Animation area */
+        .welcome-animation {
+            height: 48px;
+            width: 100%;
+            margin-bottom: 6px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .welcome-bear {
+            font-size: 32px;
+        }
+
+        .floating-balloon {
+            font-size: 23px;
+        }
+
+        /* Hearts */
+        .hearts {
+            font-size: 19px;
+            letter-spacing: 6px;
+            margin-bottom: 7px;
+        }
+
+        /* Small heading */
+        .small-text {
+            font-family: "Caveat", cursive;
+            font-size: 16px;
+            margin: 5px 0 7px;
+        }
+
+        /* Main heading */
+        .welcome-container h1 {
+            font-family: "Pacifico", cursive;
+            font-size: 36px;
+            line-height: 1.1;
+            margin: 5px 0 9px;
+        }
+
+        /* Message */
+        .welcome-message {
+            font-family: "Caveat", cursive;
+            font-size: 17px;
+            line-height: 1.4;
+            margin: 5px 0 9px;
+        }
+
+        /* Birthday photo */
+        .birthday-image {
+            width: 155px;
+            height: 155px;
+
+            object-fit: cover;
+            border-radius: 50%;
+
+            margin: 8px auto;
+            display: block;
+        }
+
+        /* Hint */
+        .hint {
+            font-family: "Caveat", cursive;
+            font-size: 16px;
+            margin: 7px 0 9px;
+        }
+
+        /* Button */
+        .welcome-container button {
+            font-family: "Caveat", cursive;
+            font-size: 16px;
+            font-weight: 700;
+
+            padding: 10px 22px;
+            margin-top: 4px;
+
+            border: none;
+            border-radius: 25px;
+
+            cursor: pointer;
+        }
+
+
+        /* ===== MOBILE ===== */
+
+        @media (max-width: 600px) {
+
+            .welcome-container {
+                width: 92%;
+                max-width: 400px;
+                max-height: 94vh;
+                padding: 18px 14px;
+            }
+
+            .welcome-animation {
+                height: 42px;
+                margin-bottom: 4px;
+            }
+
+            .welcome-bear {
+                font-size: 27px;
+            }
+
+            .floating-balloon {
+                font-size: 20px;
+            }
+
+            .hearts {
+                font-size: 17px;
+                letter-spacing: 5px;
+                margin-bottom: 5px;
+            }
+
+            .small-text {
+                font-size: 14px;
+                margin: 4px 0 5px;
+            }
+
+            .welcome-container h1 {
+                font-size: 27px;
+                line-height: 1.1;
+                margin: 4px 0 7px;
+            }
+
+            .welcome-message {
+                font-size: 14px;
+                line-height: 1.35;
+                margin: 4px 0 7px;
+            }
+
+            .birthday-image {
+                width: 125px;
+                height: 125px;
+                margin: 6px auto;
+            }
+
+            .hint {
+                font-size: 14px;
+                margin: 5px 0 7px;
+            }
+
+            .welcome-container button {
+                font-size: 14px;
+                padding: 9px 18px;
+                margin-top: 3px;
+            }
+        }
+    </style>
+
+</head>
+
+
+<body>
+    <!-- Floating Love Emojis -->
+<div class="love-bg">
+    <span>❤️</span>
+    <span>💕</span>
+    <span>💜</span>
+    <span>😘</span>
+    <span>💋</span>
+    <span>💖</span>
+    <span>💕</span>
+    <span>❤️</span>
+    <span>💜</span>
+    <span>😘</span>
+    <span>💗</span>
+    <span>💋</span>
+</div>
+
+    <div class="welcome-container">
+
+        <!-- Cute Welcome Animation -->
+        <div class="welcome-animation">
+
+            <div class="floating-balloon balloon-left">
+                🎈
+            </div>
+
+            <div class="welcome-bear">
+                🐻
+            </div>
+
+            <div class="floating-balloon balloon-right">
+                🎈
+            </div>
+
+        </div>
+
+
+        <!-- Hearts -->
+        <div class="hearts">
+            ♡ ♥ ♡ ♥ ♡
+        </div>
+
+
+        <!-- Small Heading -->
+        <p class="small-text">
+            A Little Surprise For You ✨
+        </p>
+
+
+        <!-- Birthday Heading -->
+        <h1>
+            Happy Birthday,
+            <span id="personName">Magaleyy</span> 🎂
+        </h1>
+
+
+        <!-- Message -->
+        <p class="welcome-message">
+            Today is a special day because someone very special was born. 💖
+        </p>
+
+
+        <!-- Birthday Image -->
+        <img src="./images/welcome.jpeg" alt="Welcome Photo" class="birthday-image">
+
+        <!-- Hint -->
+        <p class="hint">
+            Something special is waiting for you...
+        </p>
+
+
+        <!-- Surprise Button -->
+        <button onclick="openSurprise()">
+            🫶 Open Your Surprise Thangoo 🫶
+        </button>
+
+    </div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
